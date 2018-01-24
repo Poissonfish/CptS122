@@ -137,7 +137,7 @@ char **getPoorSleep(FitbitData *data) {
 		poorTemp = 0;
 	//char **range = malloc(sizeof(char*) * 2); //work for Mac only
 	static char *range[2] = { NULL }; // why can't use without static?
-	
+
 	char *stTemp = data[0].minute;
 	for (int i = 0; i < 1440; i++) {
 		// In the range of poor sleep
@@ -166,13 +166,13 @@ void exportResult(FILE *out, FitbitData *data) {
 	printf("\nResult : \n");
 	printf("Total Calories,Total Distance,Total Floors,Total Steps,Avg Heartrate,Max Steps,Sleep\n");
 	fputs("Total Calories,Total Distance,Total Floors,Total Steps,Avg Heartrate,Max Steps,Sleep\n", out);
-	sprintf(value, "%.2f,%.2f,%d,%d,%.2f,%d,%s:%s\n", 
-		getSumCal(data), 
-		getSumDist(data), 
-		getSumFloor(data), 
-		getSumStep(data), 
-		getAvgHR(data), 
-		getMaxStep(data), 
+	sprintf(value, "%.2f,%.2f,%d,%d,%.2f,%d,%s:%s\n",
+		getSumCal(data),
+		getSumDist(data),
+		getSumFloor(data),
+		getSumStep(data),
+		getAvgHR(data),
+		getMaxStep(data),
 		range[0], range[1]);
 	printf("%s\n", value);
 	fputs(value, out);

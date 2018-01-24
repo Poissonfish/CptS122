@@ -1,4 +1,5 @@
 # include "functions.h"
+# include "functions.c"
 
 int main(void) {
 	printf("Program stars\n");
@@ -13,7 +14,7 @@ int main(void) {
 	// Import data
 	printf("Importing\n");
 	data = importData(infile, 100, ",");
-	// Export result	
+	// Export result
 	printf("Exporting\n");
 	exportResult(outfile, data);
 	// Close files
