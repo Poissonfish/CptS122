@@ -1,10 +1,20 @@
+/*
+Programming Assignment 1
+Date : Jan 24, 2018
+Names : Chun-Peng James Chen
+Instructure : Andrew O'Fallon
+TA : Alexandar Lao
+Description : This program read a csv file and compute the descriptive statistics,
+then export the results to another csv file.
+*/
+
 #ifndef functions_h
 #define functions_h
 
 # include <math.h>
 # include <stdlib.h>
 # include <stdio.h>
-# include <string.h> 
+# include <string.h>
 
 typedef enum sleep {
 	NONE = 0, ASLEEP = 1, AWAKE = 2, REALLYAWAKE = 3
