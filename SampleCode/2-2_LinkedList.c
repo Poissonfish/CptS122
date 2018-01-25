@@ -62,7 +62,7 @@ void printListRec(Node *pList)
 		printf("ID: %d, %s-->\n", pList->s.id, pList->s.name);
 		printListRec(pList->pNext);
 	}
-	
+
 }
 
 // a - z based on name

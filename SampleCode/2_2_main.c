@@ -2,7 +2,7 @@
 
 // History: 1/24/18 - Implemented InsertInOrder (), started
 //                    deleteStudent ()
-//          1/22/18 - Implemented deleteAtFront (), 
+//          1/22/18 - Implemented deleteAtFront (),
 //                    which we'll use as a function to learn
 //                    how to test. Also, implemented printListRec ()
 //          1/19/18 - Defined struct node, implemented
