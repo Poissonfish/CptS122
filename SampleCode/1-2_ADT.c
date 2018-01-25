@@ -13,7 +13,7 @@
  *                                             3.78     (gpa double)           *
  *									           3        (class standing int)   *
  *									           20.5     (age double)           *
- *                                                                             *                                         
+ *                                                                             *
  * Format of output file (output.dat): See problem specification.              *
  ******************************************************************************/
 
@@ -67,14 +67,14 @@ void run_app (void)
 
 	/* Store the gpa min and max */
 	double gpa_min = 0.0, gpa_max = 0.0;
-	
+
 	/* Open the input and output files before accessing them */
 	infile = fopen ("input.dat", "r");
 	outfile = fopen ("output.dat", "w");
 
 	/* Could not open input file. May be because do not have read permissions
 	   or the file does not exist, etc. */
-	if (infile == NULL) 
+	if (infile == NULL)
 	{
 		printf ("Could not open input file %s for reading!\n", "input.dat");
 		printf ("Exiting!\n");
@@ -90,7 +90,7 @@ void run_app (void)
 		exit (1); /* Exit the program completely! */
 	}
 
-	/* Read in the first record from the input file. Recall the each record has 
+	/* Read in the first record from the input file. Recall the each record has
 	   the following:
 		- ID # as an int
 		- GPA as a double
@@ -101,25 +101,25 @@ void run_app (void)
 	class1 = read_integer (infile);
 	age1 = read_double (infile);
 
-	/* Read in the second record from the input file. */ 
+	/* Read in the second record from the input file. */
 	id2 = read_integer (infile);
 	gpa2 = read_double (infile);
 	class2 = read_integer (infile);
 	age2 = read_double (infile);
 
-	/* Read in the third record from the input file. */ 
+	/* Read in the third record from the input file. */
 	id3 = read_integer (infile);
 	gpa3 = read_double (infile);
 	class3 = read_integer (infile);
 	age3 = read_double (infile);
 
-	/* Read in the fourth record from the input file. */ 
+	/* Read in the fourth record from the input file. */
 	id4 = read_integer (infile);
 	gpa4 = read_double (infile);
 	class4 = read_integer (infile);
 	age4 = read_double (infile);
 
-	/* Read in the fifth record from the input file. */ 
+	/* Read in the fifth record from the input file. */
 	id5 = read_integer (infile);
 	gpa5 = read_double (infile);
 	class5 = read_integer (infile);
@@ -224,7 +224,7 @@ int read_integer (FILE *infile)
  * Postconditions:                                           *
  *************************************************************/
 
-double calculate_sum (double number1, double number2, double number3, 
+double calculate_sum (double number1, double number2, double number3,
 					  double number4, double number5)
 {
 	double sum = 0.0;
@@ -287,7 +287,7 @@ double calculate_deviation (double number, double mean)
  * Postconditions:                                           *
  *************************************************************/
 
-double calculate_variance (double deviation1, double deviation2, double deviation3, 
+double calculate_variance (double deviation1, double deviation2, double deviation3,
 						   double deviation4, double deviation5, int number)
 {
 	double variance = 0.0, sum = 0.0;
