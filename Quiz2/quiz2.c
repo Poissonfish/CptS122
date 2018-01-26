@@ -65,7 +65,9 @@ int deleteAtPositionN (Node **pHead, int n, int *pData) {
   Node *pTemp = NULL,
        *pPrev = NULL;
   pTemp = *pHead;
-  if (n == 1) {
+  if (*pHead == NULL)
+    return 0;
+  else if (n == 1) {
     *pHead = (*pHead)->pNext;
   } else {
     for (int i = n ; i > 1; i --) {
