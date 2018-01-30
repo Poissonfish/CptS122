@@ -7,7 +7,6 @@ typedef struct node {
   struct node *pNext;
 } Node;
 Node *makeNode (int data);
-
 void printNode (Node *node);
 int insertAtFront (Node **node, int data);
 int deleteAtPositionN (Node **pHead, int n, int *pData);
