@@ -1,11 +1,11 @@
 /*
-Programming Assignment 1
-Date : Jan 24, 2018
+Programming Assignment 2
+Date : Jan 29, 2018
 Names : Chun-Peng James Chen
 Instructure : Andrew O'Fallon
 TA : Alexandar Lao
-Description : This program read a csv file and compute the descriptive statistics,
-then export the results to another csv file.
+Description : This program allow users to manage their playlist in command-line
+environment
 */
 
 # include "functions.h"

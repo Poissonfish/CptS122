@@ -15,7 +15,8 @@ environment
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
-# include <unistd.h>
+//# include <unistd.h> // Mac
+# include <windows.h> // Windows
 
 typedef struct duration {
   int Minutes;
@@ -39,33 +40,46 @@ typedef struct node {
   struct node *pNext;
   struct node *pPrev;
 } Node;
-
-
+// Clear the screen
 void clearScreen();
+// Pause for user's response to proceed
 void Stop();
+// Display menu, take and return the user's option
 int displayMenu();
+// Perform user's option, will check if any file loaded when needed
 void doOption(int option, Node **playlist, int *isLoaded);
+// Load the data from file and store in playlist
 int doLoad(Node **playlist);
+// Split a string into a string array by the delim
 char ** strsplit(char *input, int size, const char *delim);
+// Convert a string array into a record struct
 Record *getRecord(char **elements);
+// Make new node that contain input record
 Node *makeNode(Record record);
+// Insert new not at front, return 1 if succeed
 int insertFront(Node **playlist, Record record);
+// Store the current playlist into a file
 void doStore(Node *playlist);
+// Display the content of playlist
 void doDisplay(Node *playlist);
+// Print list by artist
 void printList(Node *playlist, int option, char *artist);
+// Allow user to edit the record
 void doEdit(Node *playlist);
+// Subsetting the linked list, return the subset
 Node *subList(Node *playlist, char *artist, int selected[]);
+// check if the list contain more than one record
 int isMoreThanOne(Node *playlist);
-Record getChangedRecord(Record subrecord);
+// Edit the selected node
 void editNodeN(Node *playlist, int selected);
+// Edit the rating in the specific record
 void doRate(Node *playlist);
+// Display the song
 void doPlay(Node *playlist);
 
 // void doInsert();
 // void doDelete();
 // void doSort();
-// void doRate();
-// void doPlay();
 // void doShuffle();
 
 #endif /* functions_h */

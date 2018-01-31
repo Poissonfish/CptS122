@@ -12,8 +12,8 @@ environment
 
 
 void clearScreen() {
-	system("clear"); // For MacOS
-	// system("CLS"); // For Windows
+	//system("clear"); // For MacOS
+	 system("CLS"); // For Windows
 }
 
 
@@ -25,11 +25,11 @@ void Stop() {
 
 
 int displayMenu() {
-		// Declaration
+	// Declaration
     int option = 0;
-		// Print welcom message and menu
-		printf("Hi, welcome to my playlist manager!\n");
-		printf("Please input an option: \n");
+	// Print welcom message and menu
+	printf("Hi, welcome to my playlist manager!\n");
+	printf("Please input an option: \n");
     printf("(1) load\n");
     printf("(2) store\n");
     printf("(3) display\n");
@@ -53,7 +53,7 @@ void doOption(int option, Node **playlist, int *isLoaded) {
 	else if (*isLoaded)
 		switch(option) {
 	    case 2:
-		   	doStore(*playlist);
+		  doStore(*playlist);
 	      break;
 	    case 3:
 	      doDisplay(*playlist);
@@ -80,8 +80,9 @@ void doOption(int option, Node **playlist, int *isLoaded) {
 	    //   doShuffle();
 	    //   break;
 	    case 11:
-				clearScreen();
-	      printf("Good bye!\n");
+		  clearScreen();
+		  doStore(*playlist);
+	      printf("\nGood bye!\n");
 				break;
 	    default:
 	      printf("Invalid option!\n");
@@ -105,7 +106,7 @@ int doLoad(Node **playlist) {
 	int success = 0;
 	Record *record = NULL;
 	// Open file
-	infile = fopen("/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/PA2/musicPlayList.csv", "r");
+	infile = fopen("musicPlayList.csv", "r");
 	if (infile != NULL) {
 		success = 1;
 		// Read lines in file to a string
@@ -483,7 +484,8 @@ void doPlay(Node *playlist) {
 		printf("Song   : %s\n", playlist->data.Song_title);
 		printf("Genre  : %s\n", playlist->data.Genre);
 		printf("Rating : %d\n", playlist->data.Rating);
-		usleep(1000000);
+		//usleep(1000000); // Mac
+		Sleep(1000);
 		if ((playlist->pNext) == NULL)
 			playlist = pBeginning;
 		else
