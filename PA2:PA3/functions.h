@@ -15,8 +15,8 @@ environment
 # include <stdlib.h>
 # include <stdio.h>
 # include <string.h>
-//# include <unistd.h> // Mac
- # include <windows.h> // Windows
+# include <unistd.h> // Mac
+// # include <windows.h> // Windows
 
 typedef struct duration {
   int Minutes;

@@ -1,6 +1,6 @@
 /*
 Programming Assignment 2
-Date : Jan 31, 2018
+Date : Jan 29, 2018
 Names : Chun-Peng James Chen
 Instructure : Andrew O'Fallon
 TA : Alexandar Lao
@@ -9,6 +9,7 @@ environment
 */
 
 # include "functions.h"
+# include "functions.c"
 
 int main(void) {
 	printf("Program stars\n");

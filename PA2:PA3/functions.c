@@ -1,4 +1,4 @@
-/*
+ /*
 Programming Assignment 2
 Date : Jan 29, 2018
 Names : Chun-Peng James Chen
@@ -16,8 +16,8 @@ void inspectList(Node *playlist, char *msg) {
 }
 
 void clearScreen() {
-	//system("clear"); // For MacOS
-	  system("CLS"); // For Windows
+	system("clear"); // For MacOS
+	 // system("CLS"); // For Windows
 }
 
 
@@ -53,7 +53,7 @@ int displayMenu() {
 
 void doOption(int option, Node **playlist, int *isLoaded) {
 	if (option == 1)
-		*isLoaded = doLoad(playlist, "musicPlayList.csv");
+		*isLoaded = doLoad(playlist, "/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/PA2/musicPlayList.csv");
 	else if (*isLoaded)
 		switch(option) {
 	    case 2:
@@ -85,8 +85,8 @@ void doOption(int option, Node **playlist, int *isLoaded) {
 	      break;
 	    case 11:
 		  clearScreen();
-		  printf("\nGood bye!\n");
 		  doStore(*playlist);
+	      printf("\nGood bye!\n");
 				break;
 	    default:
 	      printf("Invalid option!\n");
@@ -487,7 +487,7 @@ void doEdit(Node *playlist) {
 		// Find more than one match
 		if (isMoreThanOne(sub)) {
 			clearScreen();
-			inspectList(sub, "There're more than one record found: ");
+			inspectList(playlist, "There're more than one record found: ");
 			printf("\nInput an index number for one you'd like to edit (Starts from 1): ");
 			scanf("%d", &option);
 			selectedFinal = selected[option - 1];
@@ -639,8 +639,8 @@ void playSong(Node *playlist) {
 
 
 void pauseOneSec() {
-	//usleep(1000000); // Mac
-	 Sleep(1000); // Windows
+	usleep(1000000); // Mac
+	// Sleep(1000);
 }
 
 
