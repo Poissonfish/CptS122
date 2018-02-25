@@ -12,6 +12,7 @@ environment
 # include "functions.c"
 
 int main(void) {
+
 	printf("Program stars\n");
   Node *playlist = NULL;
   int option = 0, isLoaded = 0;

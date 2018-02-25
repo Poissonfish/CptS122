@@ -9,15 +9,15 @@ int my_strcmp (const char *sl, const char *s2);
 int main (void) {
   const char *src = "Hello, I'm James";
   char *des = NULL;
-  // Question 1
-  des = my_strcpy(NULL, src);
-  printf("src : %s\ndes : %s\n", src, des);
-  // Question 2
-  des = my_strncat("zzzzz", src, 5);
-  printf("src : %s\ndes : %s\n", src, des);
+  // // Question 1
+  // des = my_strcpy(NULL, src);
+  // printf("src : %s\ndes : %s\n", src, des);
+  // // Question 2
+  // des = my_strncat("zzzzz", src, 5);
+  // printf("src : %s\ndes : %s\n", src, des);
   // Question 3
   char *str1 = "abcdfdd",
-       *str2 = "abcd";
+       *str2 = "abcdfd";
   printf("comparison : %d\n", my_strcmp (str1, str2));
   printf("comparison : %d\n", strcmp (str1, str2));
 }

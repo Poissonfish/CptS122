@@ -1,0 +1,9 @@
+In file included from /Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/Lab3/main.c:2:
+/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/Lab3/functions.c:61:25: error: no member named 'sIze' in 'struct desk'; did you mean 'size'?
+    int counter = desk->sIze;
+                        ^~~~
+                        size
+/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/Lab3/functions.h:21:7: note: 'size' declared here
+  int size;
+      ^
+1 error generated.

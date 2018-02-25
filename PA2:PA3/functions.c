@@ -53,7 +53,7 @@ int displayMenu() {
 
 void doOption(int option, Node **playlist, int *isLoaded) {
 	if (option == 1)
-		*isLoaded = doLoad(playlist, "/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/PA2/musicPlayList.csv");
+		*isLoaded = doLoad(playlist, "/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/PA2:PA3/musicPlayList.csv");
 	else if (*isLoaded)
 		switch(option) {
 	    case 2:
@@ -213,7 +213,6 @@ int insertFront(Node **playlist, Record record) {
 	return success;
 }
 
-
 void doStore(Node *playlist) {
 	clearScreen();
 	printf("Storing...");
@@ -224,16 +223,19 @@ void doStore(Node *playlist) {
 	outfile = fopen("musicPlayList.csv", "w");
 	// If is a valid list
 	while (playlist != NULL) {
+		char *string = (char *)malloc(sizeof(char) * 1000);
+		// char *string[300];
+		catPlaylist(&string, playlist->data.Artist);
+		catPlaylist(&string, playlist->data.Album_title);
+		catPlaylist(&string, playlist->data.Song_title);
+		catPlaylist(&string, playlist->data.Genre);
 		// Put it into a string, add double quote for the first column wihch would likely contain comma
-		sprintf(string, "\"%s\",\"%s\",\"%s\",%s,%d:%d,%d,%d\n",
-									playlist->data.Artist,
-									playlist->data.Album_title,
-									playlist->data.Song_title,
-									playlist->data.Genre,
-									playlist->data.Song_length.Minutes,
-									playlist->data.Song_length.Secondes,
-									playlist->data.Number_times_played,
-									playlist->data.Rating);
+		sprintf(string, "%s%d:%d,%d,%d\n",
+			string,
+			playlist->data.Song_length.Minutes,
+			playlist->data.Song_length.Secondes,
+			playlist->data.Number_times_played,
+			playlist->data.Rating);
 		// Put the string into file
 		fputs(string, outfile);
 		// Point to next list
@@ -244,6 +246,27 @@ void doStore(Node *playlist) {
 	Stop();
 }
 
+void catPlaylist(char **string, char *input) {
+	if (isContainComma(input)) {
+		// printf("Input has comma\n \t%s\n", input);
+		strcat(*string, "\"");
+		strcat(*string, input);
+		strcat(*string, "\",");
+		// printf("You got %s\n", *string);
+	}
+	else {
+		// printf("Input has no comma\n \t%s\n", input);
+		strcat(*string, input);
+		strcat(*string, ",");
+	}
+}
+
+int isContainComma(char *string) {
+	if (strchr(string, ',') == NULL)
+		return 0;
+	else
+		return 1;
+}
 
 void doDisplay(Node *playlist) {
 	int option = 0;

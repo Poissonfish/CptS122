@@ -63,6 +63,10 @@ Node *makeNode(Record record);
 int insertFront(Node **playlist, Record record);
 // Store the current playlist into a file
 void doStore(Node *playlist);
+// cat a String from playlist
+void catPlaylist(char **string, char *input);
+// Check if a string contain a 'comma'
+int isContainComma(char *string);
 // Display the content of playlist
 void doDisplay(Node *playlist);
 // Print list by artist
