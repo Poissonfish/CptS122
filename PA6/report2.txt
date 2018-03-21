@@ -1,0 +1,7 @@
+,ID,Name,Email,Units,Program,Level,TimesOfAbsence,LastAbsence
+10,3255,"Mort,Kris",mort@cpts122.edu,4,CS,Senior,2,2018/3/21
+8,1122,"Smith,Jane",jane@cpts122.edu,4,CS,Sophomore,4,2018/3/21
+7,7759,"Sam,Theo",samt@cpts122.edu,4,EE,Sophomore,2,2018/3/21
+6,5530,"Payton,Ella",epayton@cpts122.edu,4,CPTE,Graduate,2,2018/3/21
+3,1121,"Leinart,Timothy",tim@cpts122.edu,4,EE,Junior,2,2018/3/21
+2,8147,"Beck,Sara",sara@cpts122.edu,4,EE,Junior,2,2018/3/21

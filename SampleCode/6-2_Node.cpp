@@ -13,6 +13,7 @@ Node::Node(const Node &newNode)
 Node::~Node()
 {
 	cout << "Inside destructor for Node!" << endl;
+	//delete this;
 }
 
 string Node::getPrintJob() const

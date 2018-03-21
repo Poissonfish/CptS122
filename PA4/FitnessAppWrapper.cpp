@@ -5,7 +5,7 @@ Names : Chun-Peng James Chen
 Instructure : Andrew O'Fallon
 TA : Alexandar Lao
 Description : This program is a basic fitness application.
-The user of the application to manually edit “diet” and “exercise” plans.
+The user of the application to manually edit ï¿½dietï¿½ and ï¿½exerciseï¿½ plans.
 */
 
 #include "FitnessAppWrapper.h"
@@ -137,7 +137,7 @@ void FitnessAppWrapper::displayMenu() {
   cout << "Please enter an option (1~9) : ";
 }
 
-int FitnessAppWrapper::getMenuOption() const {
+int FitnessAppWrapper::getMxwenuOption() const {
   int option = 0;
   cin >> option;
   clean();
@@ -187,7 +187,7 @@ void FitnessAppWrapper::runApp () {
           clean();
         }
         break;
-      case 5: 
+      case 5:
 		if (dietLoaded)
 		  displayWeeklyPlan(dietPlan);
 		else {
@@ -197,7 +197,7 @@ void FitnessAppWrapper::runApp () {
 			clean();
 		}
         break;
-      case 6: 
+      case 6:
 		if (exerciseLoaded)
 		  displayWeeklyPlan(exercisePlan);
 		else {

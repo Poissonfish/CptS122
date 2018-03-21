@@ -2,6 +2,9 @@
 
 #include <iostream>
 #include <string>
+#include <fstream>
+
+using std::fstream;
 
 using std::string;
 using std::cin;

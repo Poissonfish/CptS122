@@ -5,7 +5,7 @@ Names : Chun-Peng James Chen
 Instructure : Andrew O'Fallon
 TA : Alexandar Lao
 Description : This program is a basic fitness application.
-The user of the application to manually edit “diet” and “exercise” plans.
+The user of the application to manually edit ï¿½dietï¿½ and ï¿½exerciseï¿½ plans.
 */
 
 #pragma once
@@ -53,7 +53,7 @@ public:
   void storeWeeklyPlan (fstream &fileStream, DietPlan weeklyPlan[]);
   void storeWeeklyPlan (fstream &fileStream, ExercisePlan weeklyPlan[]);
 
-  // Display the menu 
+  // Display the menu
   void displayMenu ();
   // Get option from user and implement the feature
   int getMenuOption() const;
