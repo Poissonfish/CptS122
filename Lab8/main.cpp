@@ -1,22 +1,19 @@
+#include "BSTNode.h"
 #include "BST.h"
 
-int main(void) {
-  BST *myTree = new BST();
-  myTree -> insertNode("Monkey");
-  myTree -> insertNode("Frog");
-  myTree -> insertNode("Turtle");
-  myTree -> insertNode("Dog");
-  myTree -> insertNode("Chicken");
-  myTree -> insertNode("Elephant");
-  myTree -> insertNode("Zebra");
-  myTree -> insertNode("Giraffe");
+int main (void)
+{
+	BST myTree;
 
-  cout << "Old tree: ";
-  myTree -> inOrderTraversal();
-  cout << endl;
+	myTree.insertNode ("Monkey");
+	myTree.insertNode ("Ostrich");
+	myTree.insertNode ("Lion");
+	myTree.insertNode ("Lizard");
+	myTree.insertNode ("Cat");
+	myTree.insertNode ("Zebra");
 
-  BST *copyTree(myTree);
-  cout << "New tree: ";
-  copyTree->inOrderTraversal();
-  cout << endl;
+	BST copyTree (myTree);
+	copyTree.inOrderTraversal ();
+	copyTree.preOrderTraversal ();
+	copyTree.postOrderTraversal ();
 }

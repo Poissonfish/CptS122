@@ -25,23 +25,23 @@ int main(void) {
 
 }
 
-// void task1(void) {
-//   int n1 = 10,
-//       n2 = 42,
-//       list[] = {6,8, 42, 3, 2, 2, -6};
-//   int *const p1 = &n1; // place be pointed can't be changed
-//   const int *p2 = &n1; // value can't be changed
-//   int *p3 = list;
-//
-//   *p1 = 15; //legal
-//   p1 = &n2; //not legal, cause you can't change the pointer
-//
-//   p2 = &n2; //legal
-//   *p2 = 67; //not legal, cause you cant' modify where the pointer point to
-//
-//   p3[4] = 67; //legal
-//   list = &n1; //legal
-// }
+void task1(void) {
+  int n1 = 10,
+      n2 = 42,
+      list[] = {6,8, 42, 3, 2, 2, -6};
+  int *const p1 = &n1; // place be pointed can't be changed
+  const int *p2 = &n1; // value can't be changed
+  int *p3 = list;
+
+  *p1 = 15; //legal
+  p1 = &n2; //not legal, cause you can't change the pointer
+
+  p2 = &n2; //legal
+  *p2 = 67; //not legal, cause you cant' modify where the pointer point to
+
+  p3[4] = 67; //legal
+  list = &n1; //legal
+}
 
 
 char *copyStrToHeap(char *pStr) {

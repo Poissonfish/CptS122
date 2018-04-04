@@ -1,46 +1,70 @@
 #include "BSTNode.h"
 
-BSTNode::BSTNode(string newData) {
-  this->data = newData;
-  this->left = nullptr;
-  this->right = nullptr;
+BSTNode::BSTNode ()
+{
+	this -> mData = "";
+	this -> mpLeft = nullptr;
+	this -> mpRight = nullptr;
 }
 
-BSTNode::BSTNode(BSTNode &copy) {
-  this->data = copy.data;
-  this->left = copy.left;
-  this->right = copy.right;
+// constructor
+BSTNode::BSTNode (string newData)
+{
+	this -> mData = newData;
+	this -> mpLeft = nullptr;
+	this -> mpRight = nullptr;
 }
 
-BSTNode::~BSTNode() {
-  // do nothing here
+// copy constructor
+BSTNode::BSTNode (BSTNode &copy)
+{
+	// shallow copy
+	mData = copy.mData;
+	mpLeft = copy.mpLeft;
+	mpRight = copy.mpRight;
 }
 
-string BSTNode::getData() {
-  return this->data;
+// destructor
+BSTNode::~BSTNode ()
+{
+	// do nothing for now
 }
 
-BSTNode *&BSTNode::getLeft() {
-  return this->left;
+// getters
+string BSTNode::getData () const
+{
+	return mData;
 }
 
-BSTNode *&BSTNode::getRight() {
-  return this->right;
+BSTNode *& BSTNode::getLeftPtr ()
+{
+	return mpLeft;
 }
 
-void BSTNode::setData(string newData) {
-
+BSTNode *& BSTNode::getRightPtr ()
+{
+	return mpRight;
 }
 
-void BSTNode::setRight(BSTNode *newRight) {
-
+// setters
+void BSTNode::setData (string newData)
+{
+	mData = newData;
 }
 
-void BSTNode::setLeft(BSTNode *newLeft) {
-
+void BSTNode::setLeftPtr (BSTNode *newLeftPtr)
+{
+	mpLeft = newLeftPtr;
 }
 
-ostream &operator<< (ostream &lhs, BSTNode &rhs) {
-  lhs << rhs.getData() << " ";
-  return lhs;
+void BSTNode::setRightPtr (BSTNode *newRightPtr)
+{
+	mpRight = newRightPtr;
+}
+
+// overloaded stream insertion operator
+ostream & operator<< (ostream &output, BSTNode const &rhs)
+{
+	output << rhs.getData () << " ";
+	return output;
 }

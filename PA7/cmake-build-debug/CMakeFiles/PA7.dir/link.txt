@@ -1,0 +1,1 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/PA7.dir/main.cpp.o CMakeFiles/PA7.dir/BST.cpp.o CMakeFiles/PA7.dir/BSTNode.cpp.o  -o PA7 

@@ -23,6 +23,7 @@
       <extensions>
         <pair source="cpp" header="h" fileNamingConvention="NONE" />
         <pair source="c" header="h" fileNamingConvention="NONE" />
+        <pair source="cxx" header="h" fileNamingConvention="NONE" />
       </extensions>
     </Objective-C-extensions>
   </code_scheme>

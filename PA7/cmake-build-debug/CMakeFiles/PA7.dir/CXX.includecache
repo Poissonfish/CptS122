@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/PA7/BST.cpp
+BST.h
+/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/PA7/BST.h
+
+/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/PA7/BST.h
+BSTNode.h
+/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/PA7/BSTNode.h
+BSTNode.cpp
+/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/PA7/BSTNode.cpp
+sstream
+-
+fstream
+-
+
+/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/PA7/BSTNode.cpp
+BSTNode.h
+/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/PA7/BSTNode.h
+
+/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/PA7/BSTNode.h
+iostream
+-
+string
+-
+cstdlib
+-
+
+/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/PA7/main.cpp
+iostream
+-
+BST.h
+/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/PA7/BST.h
+BST.cpp
+/Users/jameschen/Dropbox/GradSchool/*Spring_18/CPTS_122/PA7/BST.cpp
+

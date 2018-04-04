@@ -1,106 +1,210 @@
 #include "BST.h"
 
-BST::BST() {
-  this->mpRoot = nullptr;
+// NOTE: we would not be able to access
+//		 mData, mpLeft, and mpRight if BST was
+//		 not a friend of BSTNode!
+//       comment out the friend declaration in BSTNode.h
+//       on line 19 and watch which errors pop up!
+
+// constructor
+BST::BST ()
+{
+	this -> mpRoot = nullptr;
 }
 
-// Deep copy (preorder)
-BST::BST(BST &copy) {
-  this->mpRoot = nullptr;
-  copyTreeHelper(copy.mpRoot);
+// copy constructor
+BST::BST (BST &copy)
+{
+	// call the copyTree helper function
+	this -> mpRoot = copyTree (copy.mpRoot);
 }
 
-BST::~BST() {
-  destroyTreeHelper(this->mpRoot);
+//destructor
+BST::~BST ()
+{
+	// call the destroyTree function
+	destroyTree (mpRoot);
 }
 
-// ====== public functions =======
+// overloaded assignment operator
+BST & BST::operator= (BST const &rhs)
+{
+	// call the copyTree helper function
+	this -> mpRoot = copyTree (rhs.mpRoot);
 
-void BST::insertNode(string newData) {
-  insertNode(this->mpRoot, newData);
+	return (*this);
 }
 
-void BST::inOrderTraversal() {
-  inOrderTraversal(this->mpRoot);
+// recursively deep copies a BST
+// notice the pre-order traversal!
+BSTNode* BST::copyTree (BSTNode const *currentNode)
+{
+	// base case: if the current node is null
+	// return null
+	if (currentNode == nullptr)
+	{
+		return nullptr;
+	}
+
+	// dynamically allocate a new node to store the new node
+	BSTNode *newNode = new BSTNode ();
+
+	// copy the currentNode's data
+	newNode -> setData (currentNode -> mData);
+
+	// recursive calls to the left and right
+	newNode -> mpLeft = copyTree (currentNode -> mpLeft);
+	newNode -> mpRight = copyTree (currentNode -> mpRight);
+
+	return newNode;
 }
 
-void BST::preOrderTraversal() {
-  preOrderTraversal(this->mpRoot);
+// the public insertNode function will
+// call the private insertNode function in
+// order to hide the root and keep it private
+void BST::insertNode (string newData)
+{
+	insertNode (&mpRoot, newData);
 }
 
-void BST::postOrderTraversal() {
-  postOrderTraversal(this->mpRoot);
+void BST::inOrderTraversal ()
+{
+	// call the private inOrderTraversal function
+	// by passing in the root
+	inOrderTraversal (mpRoot);
+	cout << endl;
 }
 
-bool BST::isEmpty() {
-  return (this->mpRoot == nullptr);
+void BST::preOrderTraversal ()
+{
+	// call the private preOrderTraversal function
+	// by passing in the root
+	preOrderTraversal (mpRoot);
+	cout << endl;
 }
 
-// ======= private functions =======
-
-BSTNode *BST::copyTreeHelper(BSTNode *&currentNode) {
-  if (currentNode != nullptr) {
-    insertNode(currentNode->getData());
-
-  }
+void BST::postOrderTraversal ()
+{
+	// call the private postOrderTraversal function
+	// by passing in the root
+	postOrderTraversal (mpRoot);
+	cout << endl;
 }
 
-void BST::destroyTreeHelper(BSTNode *currentNode) {
-  if (currentNode != nullptr) {
-    destroyTreeHelper(currentNode -> getLeft());
-    destroyTreeHelper(currentNode -> getRight());
-    delete currentNode;
-  }
+bool BST::isEmpty ()
+{
+	bool success = false;
+
+	// if the root is null, the tree is empty
+	if (mpRoot == nullptr)
+	{
+		success = true;
+	}
+
+	return success;
 }
 
-void BST::insertNode(BSTNode *&currentNode, string newData) {
-  // base case
-  if (currentNode == nullptr) {
-      // Insert it
-      currentNode = new BSTNode(newData);
-      return;
-  }
+// ******************** private member functions below ********************
 
-  // newData is greater
-  if (newData < currentNode->getData()) {
-    // traverse left
-    insertNode(currentNode->getLeft(), newData);
-  // newData is less
-  } else if (newData > currentNode->getData()) {
-    // traverse right
-    insertNode(currentNode->getRight(), newData);
-  // newData is equal
-  } else {
-    // do nothing
-  }
+BSTNode* BST::makeNode (string newData)
+{
+	BSTNode *newNode = new BSTNode (newData);
+
+	return newNode;
 }
 
-// In, Left->Process->Right, dot below
-void BST::inOrderTraversal(BSTNode *currentNode) {
-  // base case
-  if (currentNode != nullptr) {
-    inOrderTraversal(currentNode->getLeft());
-    cout << *currentNode;
-    inOrderTraversal(currentNode->getRight());
-  }
+void BST::destroyTree (BSTNode *pTree)
+{
+	// base case: the current node is not null
+	if (pTree != nullptr)
+	{
+		// go all the way to the left
+		destroyTree (pTree -> mpLeft);
+
+		// go all the way to the right
+		destroyTree (pTree -> mpRight);
+
+		// print out the node's data before we delete it
+		cout << "Deleting node with value: " << pTree -> getData () << endl;
+
+		// delete the node
+		delete pTree;
+	}
 }
 
-// Pre, Process->Left->Right,  dot to the left: insert node
-void BST::preOrderTraversal(BSTNode *currentNode) {
-  // base case
-  if (currentNode != nullptr) {
-    cout << *currentNode;
-    inOrderTraversal(currentNode->getLeft());
-    inOrderTraversal(currentNode->getRight());
-  }
+void BST::insertNode (BSTNode **pTree, string newData)
+{
+	// base case: pTree is null
+	if (*pTree == nullptr)
+	{
+		// make the newNode with the makeNode function
+		BSTNode *newNode = makeNode (newData);
+
+		// set the current node to the newNode
+		// since we passed in pTree as a reference to a pointer,
+		// we don't need to dereference pTree
+		// all changes to pTree will be retained through the reference
+		*pTree = newNode;
+	}
+	else if (newData > ((*pTree) -> mData))
+	{
+		// the data is greater then the current node's data
+		// so we go right
+		// since the getRightPtr () returns a reference to the node,
+		// all changes to the right ptr will be retained
+		insertNode (&(*pTree) -> getRightPtr (), newData);
+	}
+	else if (newData < ((*pTree) -> mData))
+	{
+		// the data is less than the current node's data
+		// so we go left
+		// since the getLeftPtr () returns a reference to the node,
+		// all changes to the right ptr will be retained
+		insertNode (&(*pTree) -> getLeftPtr (), newData);
+	}
+	else
+	{
+		// if all other cases fail, the newData must be a duplicate
+		cout << newData << " is a duplicate value!" << endl;
+	}
 }
 
-// Post, Left->Right->Process, dot to the right: delete node
-void BST::postOrderTraversal(BSTNode *currentNode) {
-  // base case
-  if (currentNode != nullptr) {
-    inOrderTraversal(currentNode->getLeft());
-    inOrderTraversal(currentNode->getRight());
-    cout << *currentNode;
-  }
+void BST::inOrderTraversal (BSTNode *pTree)
+{
+	if (pTree != nullptr)
+	{
+		inOrderTraversal (pTree -> getLeftPtr ());
+
+		// dereference pTree here to call the
+		// overloaded stream insertion operator
+		cout << *pTree;
+
+		// if we didn't dereference pTree,
+		// we would not call the overloaded stream insertion operator
+		// because the rhs is a pointer to a BSTNode, NOT a BSTNode
+		// this will just print out the address of pTree
+		//cout << pTree;
+
+		inOrderTraversal (pTree -> getRightPtr ());
+	}
+}
+
+void BST::preOrderTraversal (BSTNode *pTree)
+{
+	if (pTree != nullptr)
+	{
+		cout << *pTree;
+		preOrderTraversal (pTree -> getLeftPtr ());
+		preOrderTraversal (pTree -> getRightPtr ());
+	}
+}
+
+void BST::postOrderTraversal (BSTNode *pTree)
+{
+	if (pTree != nullptr)
+	{
+		postOrderTraversal (pTree -> getLeftPtr ());
+		postOrderTraversal (pTree -> getRightPtr ());
+		cout << *pTree;
+	}
 }

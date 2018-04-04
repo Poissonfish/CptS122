@@ -1,0 +1,56 @@
+- stack : LIFO, last in first output
+
+- queue : FIFO, first in first output
+
+- dynamic data structure (DDS)
+  A dynamic data structure (DDS) refers to an organization or collection of data
+  in memory that has the flexibility to grow or shrink in size, enabling
+  a programmer to control exactly how much memory is utilized.
+  Dynamic data structures change in size by having unused memory allocated
+  or de-allocated from the heap as needed.
+
+- object-oriented programming (OOP)
+  Encapsulation - a way of wrapping of data/attributes and methods/operation
+    into a structure.
+
+  Inheritance
+
+  Polymorphism
+
+  Information hiding - Implementation details are hidden within objects
+    Guarantees integrity of data.
+    Access specifier : public, protected and private
+
+  Overloading - Allows for functions with the same name to be defined.
+    The key is the functions must have different parameters (number, type, order)
+
+- object
+  an instantiation of a class
+
+- Unified Modeling Language (UML)
+
+- The big three
+ should define destructor,
+ copy constructor,
+ and overloaded copy assignment operator
+
+- Pass-by-value (PBV) - a copy of content of is made
+
+- Pass-by-reference (PBR) - the called function can access the caller's data
+  directly and modify the data
+
+- Procedural abstraction
+  is the idea that each method should have a coherent conceptual description
+  that separates its implementation from its users.
+  You can encapsulate behavior in methods that are internal to an object
+  or methods that are widely usable.
+
+- Data abstraction
+  refers to providing only essential information to the outside world and
+  hiding their background details, i.e., to represent the needed information
+  in program without presenting the details.
+
+- stream
+  a stream is a source or sink of data, usually individual bytes or characters.
+  Streams are an abstraction used when reading or writing files, or
+  communicating over network sockets.
