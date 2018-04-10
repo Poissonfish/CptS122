@@ -24,11 +24,11 @@
   <component name="FileEditorManager">
     <splitter split-orientation="horizontal" split-proportion="0.36671057">
       <split-first>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="BSTNode.h" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/BSTNode.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="195">
+                <state relative-caret-position="462">
                   <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
                   <folding>
                     <element signature="e#14#33#0" expanded="true" />
@@ -56,12 +56,12 @@
           <split-first>
             <splitter split-orientation="vertical" split-proportion="0.5386158">
               <split-first>
-                <leaf>
+                <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
                   <file leaf-file-name="BST.h" pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/BST.h">
                       <provider selected="true" editor-type-id="text-editor">
                         <state relative-caret-position="252">
-                          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+                          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
                           <folding>
                             <element signature="e#14#34#0" expanded="true" />
                             <element signature="e#171#189#0" expanded="true" />
@@ -83,11 +83,11 @@
                 </leaf>
               </split-first>
               <split-second>
-                <leaf>
+                <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
                   <file leaf-file-name="BST.h" pinned="false" current-in-tab="true">
                     <entry file="file://$PROJECT_DIR$/BST.h">
                       <provider selected="true" editor-type-id="text-editor">
-                        <state relative-caret-position="1882">
+                        <state relative-caret-position="580">
                           <caret line="99" column="2" selection-start-line="99" selection-start-column="2" selection-end-line="99" selection-end-column="2" />
                           <folding>
                             <element signature="e#14#34#0" expanded="true" />
@@ -112,12 +112,26 @@
             </splitter>
           </split-first>
           <split-second>
-            <leaf>
+            <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
               <file leaf-file-name="BST.h" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/BST.h">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="33">
+                    <state relative-caret-position="231">
                       <caret line="11" selection-start-line="11" selection-end-line="11" />
+                      <folding>
+                        <element signature="e#14#34#0" expanded="true" />
+                        <element signature="e#171#189#0" expanded="true" />
+                        <element signature="e#918#936#0" expanded="true" />
+                        <element signature="e#1316#1334#0" expanded="true" />
+                        <element signature="e#1394#1412#0" expanded="true" />
+                        <element signature="e#1499#1517#0" expanded="true" />
+                        <element signature="e#1591#1609#0" expanded="true" />
+                        <element signature="e#2085#2103#0" expanded="true" />
+                        <element signature="e#2244#2262#0" expanded="true" />
+                        <element signature="e#2574#2592#0" expanded="true" />
+                        <element signature="e#2802#2820#0" expanded="true" />
+                        <element signature="e#3123#3141#0" expanded="true" />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -125,8 +139,23 @@
               <file leaf-file-name="BSTNode.h" pinned="false" current-in-tab="false">
                 <entry file="file://$PROJECT_DIR$/BSTNode.h">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="462">
-                      <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+                    <state relative-caret-position="525">
+                      <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+                      <folding>
+                        <element signature="e#14#33#0" expanded="true" />
+                        <element signature="e#150#168#0" expanded="true" />
+                        <element signature="e#595#613#0" expanded="true" />
+                        <element signature="e#756#774#0" expanded="true" />
+                        <element signature="e#835#853#0" expanded="true" />
+                        <element signature="e#916#934#0" expanded="true" />
+                        <element signature="e#1012#1030#0" expanded="true" />
+                        <element signature="e#1110#1128#0" expanded="true" />
+                        <element signature="e#1207#1225#0" expanded="true" />
+                        <element signature="e#1306#1324#0" expanded="true" />
+                        <element signature="e#1392#1410#0" expanded="true" />
+                        <element signature="e#1484#1502#0" expanded="true" />
+                        <element signature="e#1584#1602#0" expanded="true" />
+                      </folding>
                     </state>
                   </provider>
                 </entry>
@@ -137,13 +166,6 @@
                     <state relative-caret-position="84">
                       <caret line="4" selection-start-line="4" selection-end-line="4" />
                     </state>
-                  </provider>
-                </entry>
-              </file>
-              <file leaf-file-name="BST.cpp" pinned="false" current-in-tab="false">
-                <entry file="file://$PROJECT_DIR$/BST.cpp">
-                  <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="-149" />
                   </provider>
                 </entry>
               </file>
@@ -190,6 +212,7 @@
     </layout>
   </component>
   <component name="ProjectFrameBounds">
+    <option name="x" value="166" />
     <option name="y" value="22" />
     <option name="width" value="3037" />
     <option name="height" value="1578" />
@@ -199,6 +222,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -214,7 +238,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -260,34 +283,34 @@
       <option name="presentableId" value="Default" />
       <updated>1522860706932</updated>
       <workItem from="1522860708582" duration="14326000" />
+      <workItem from="1523228625135" duration="27000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14326000" />
+    <option name="totallyTimeSpent" value="14353000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="22" width="3037" height="1578" extended-state="0" />
-    <editor active="true" />
+    <frame x="166" y="22" width="3037" height="1578" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.10141587" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.10141587" />
       <window_info anchor="bottom" id="TODO" order="9" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32997313" />
       <window_info anchor="bottom" id="CMake" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="right" id="Run" order="4" weight="0.27527165" />
       <window_info anchor="bottom" id="Version Control" order="3" show_stripe_button="false" />
+      <window_info anchor="right" id="Run" order="4" weight="0.27527165" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Terminal" order="3" weight="0.16592473" />
-      <window_info anchor="bottom" id="Debug" order="6" weight="0.3998656" />
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="6" weight="0.3998656" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="8" weight="0.4" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info anchor="bottom" id="Messages" order="0" weight="0.32997313" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,8 +325,58 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/BST.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="e#14#34#0" expanded="true" />
+            <element signature="e#171#189#0" expanded="true" />
+            <element signature="e#918#936#0" expanded="true" />
+            <element signature="e#1316#1334#0" expanded="true" />
+            <element signature="e#1394#1412#0" expanded="true" />
+            <element signature="e#1499#1517#0" expanded="true" />
+            <element signature="e#1591#1609#0" expanded="true" />
+            <element signature="e#2085#2103#0" expanded="true" />
+            <element signature="e#2244#2262#0" expanded="true" />
+            <element signature="e#2574#2592#0" expanded="true" />
+            <element signature="e#2802#2820#0" expanded="true" />
+            <element signature="e#3123#3141#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BSTNode.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding>
+            <element signature="e#14#33#0" expanded="true" />
+            <element signature="e#150#168#0" expanded="true" />
+            <element signature="e#595#613#0" expanded="true" />
+            <element signature="e#756#774#0" expanded="true" />
+            <element signature="e#835#853#0" expanded="true" />
+            <element signature="e#916#934#0" expanded="true" />
+            <element signature="e#1012#1030#0" expanded="true" />
+            <element signature="e#1110#1128#0" expanded="true" />
+            <element signature="e#1207#1225#0" expanded="true" />
+            <element signature="e#1306#1324#0" expanded="true" />
+            <element signature="e#1392#1410#0" expanded="true" />
+            <element signature="e#1484#1502#0" expanded="true" />
+            <element signature="e#1584#1602#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BST.cpp">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
     </entry>
     <entry file="file:///Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1/iterator">
       <provider selected="true" editor-type-id="text-editor">
@@ -335,13 +408,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/BSTNode.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        <state relative-caret-position="525">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+          <folding>
+            <element signature="e#14#33#0" expanded="true" />
+            <element signature="e#150#168#0" expanded="true" />
+            <element signature="e#595#613#0" expanded="true" />
+            <element signature="e#756#774#0" expanded="true" />
+            <element signature="e#835#853#0" expanded="true" />
+            <element signature="e#916#934#0" expanded="true" />
+            <element signature="e#1012#1030#0" expanded="true" />
+            <element signature="e#1110#1128#0" expanded="true" />
+            <element signature="e#1207#1225#0" expanded="true" />
+            <element signature="e#1306#1324#0" expanded="true" />
+            <element signature="e#1392#1410#0" expanded="true" />
+            <element signature="e#1484#1502#0" expanded="true" />
+            <element signature="e#1584#1602#0" expanded="true" />
+          </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BSTNode.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
@@ -351,14 +436,12 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/BST.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-149" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/BST.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        <state relative-caret-position="231">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="e#14#34#0" expanded="true" />
             <element signature="e#171#189#0" expanded="true" />
